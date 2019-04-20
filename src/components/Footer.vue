@@ -1,5 +1,5 @@
 <template lang="html">
-    <div>goods footer</div>
+    <div>footer</div>
 </template>
 
 <script>
