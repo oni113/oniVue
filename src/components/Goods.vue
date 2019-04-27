@@ -21,7 +21,6 @@ export default {
     },
     methods : {
         getGoodsList() {
-            console.log('call getGoodsList');
             const listURI = '/api/goods';
             this.$http.get(listURI, {}).then((result) => {
                 if (result.data.results) {

@@ -7,7 +7,7 @@
             <li>2. ajax form submit</li>
         </ul>
         <div class="dropbox">
-            <input type="file" name="myFile" @change="upload($event.target.name, $event.target.files)" @drop="upload($event.target.name, $event.target.files)" value="">
+            <input type="file" name="myfile" @change="upload($event.target.name, $event.target.files)" @drop="upload($event.target.name, $event.target.files)" value="">
             <h2>파일을 드래그해서 드랍해주세요.</h2>
         </div>
     </div>
@@ -28,10 +28,15 @@ export default {
             formData.append(name, files[0], files[0].name);
             console.log(formData);
             //TODO : upload REST
-            /*
-            const uploadURI = '/api/upload';
-            axios.post(url, formData).then(response => {
+            const url = '/file/upload/1';
+            this.$http.post(url, formData).then(response => {
                 console.log(response);
+            });
+
+            /*
+            const saveURI = '/file/upload/1';
+            this.$http.post(saveURI, formData).then((result) => {
+                console.log(result);
             });
             */
         }
